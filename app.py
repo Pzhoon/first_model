@@ -78,6 +78,7 @@ input_values = [[
         state['sex'] == '남성', state['region'] == '북서',
         state['region'] == '북동', state['region'] == '남서'
     ]]
-    pred = first_model.predict(input_values)
+    pred = model.predict(input_values)
     # st.write(pred[0])
     st.metric(label='예측값', value=pred[0])
+    
