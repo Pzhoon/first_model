@@ -26,7 +26,7 @@ st.number_input(
 st.radio(
     label='성별',
     option=["남성", "여성"],
-    index=0 # 기본선택
+    index=0, # 기본선택
     key='sex'
 )
 st.write(st.session_state['sex'])
@@ -34,7 +34,7 @@ st.write(st.session_state['sex'])
 # bmi : 실수형
 st.number_input(
     label="BMI",
-    step=0.1
+    step=0.1,
     value=25.0,
     key='bmi'
 )
@@ -60,7 +60,7 @@ st.write(st.sessiom_state['smoker'])
 # region : 지역
 st.selectbox(
     label="지역",
-    options=["북동", "북서", "남동", "남서"]
+    options=["북동", "북서", "남동", "남서"],
     index=2,
     key='region'
 )
@@ -68,4 +68,3 @@ st.write(st.session_state['region'])
 
 if st.button('예측'):
     st.balloons()
-    
