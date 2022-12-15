@@ -30,3 +30,42 @@ st.radio(
     key='sex'
 )
 st.write(st.session_state['sex'])
+
+# bmi : 실수형
+st.number_input(
+    label="BMI",
+    step=0.1
+    value=25.0,
+    key='bmi'
+)
+# st.write(st.session_state['bmi])
+
+# chirldren : 자녀수
+st.number_input(
+    label="자녀수",
+    step=1,
+    value=1,
+    key='children'
+)
+#st.write(st.session_state['children])
+
+# smoker : 흡연여부
+st.checkbox(
+    label='흡연여부',
+    value=False,
+    key='smoker'
+)
+st.write(st.sessiom_state['smoker'])
+
+# region : 지역
+st.selectbox(
+    label="지역",
+    options=["북동", "북서", "남동", "남서"]
+    index=2,
+    key='region'
+)
+st.write(st.session_state['region'])
+
+if st.button('예측'):
+    st.balloons()
+    
