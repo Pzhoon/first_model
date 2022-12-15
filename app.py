@@ -29,7 +29,7 @@ st.radio(
     index=0, # 기본선택
     key='sex'
 )
-st.write(st.session_state['sex'])
+#st.write(st.session_state['sex'])
 
 # bmi : 실수형
 st.number_input(
@@ -55,7 +55,7 @@ st.checkbox(
     value=False,
     key='smoker'
 )
-st.write(st.sessiom_state['smoker'])
+#st.write(st.sessiom_state['smoker'])
 
 # region : 지역
 st.selectbox(
