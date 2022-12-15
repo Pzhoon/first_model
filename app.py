@@ -7,7 +7,7 @@ st.write(df)
 import joblib
 import os
 
-model_path = f"{os.path.dirname(os.path.abspath(__file__))}/model.pkl"
+model_path = f"{os.path.dirname(os.path.abspath(__file__))}/first_model.pkl"
 model = joblib.load(model_path)
 st.write("## 선형 회귀 모델")
 st.write(pd.Series(model.coef_, index=["age", "bmi", "children", "smoker", "sex_male", "region_northwest", "region_northeast", "region_southwest"]))
@@ -68,3 +68,16 @@ st.write(st.session_state['region'])
 
 if st.button('예측'):
     st.balloons()
+    # 예측
+    # model.predict(X_test) -> 전처리한 데이터 형태로 들어간 행렬, df.
+    # df X -> 이중리스트 ([])
+    # [[age,bmi,children,smoker,sex_male,
+    #   region_northwest,region_northeast,region_southwest]]
+input_values = [[
+        state['age'], state['bmi'], state['children'], state['smoker'],
+        state['sex'] == '남성', state['region'] == '북서',
+        state['region'] == '북동', state['region'] == '남서'
+    ]]
+    pred = model.predict(input_values)
+    # st.write(pred[0])
+    st.metric(label='예측값', value=pred[0])
