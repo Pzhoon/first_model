@@ -4,8 +4,6 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/bigdata-young/ai_26th/main/data/insurance.csv')
 st.write(df)
 
-pip install joblib
-pip install scikit-learn
 import joblib
 import os
 
