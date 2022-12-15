@@ -64,7 +64,7 @@ st.selectbox(
     index=2,
     key='region'
 )
-st.write(st.session_state['region'])
+#st.write(st.session_state['region'])
 
 if st.button('예측'):
     st.balloons()
@@ -81,4 +81,3 @@ input_values = [[
     pred = model.predict(input_values)
     # st.write(pred[0])
     st.metric(label='예측값', value=pred[0])
-    
