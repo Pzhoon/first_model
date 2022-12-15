@@ -4,7 +4,6 @@ import pandas as pd
 df = pd.read_csv('https://raw.githubusercontent.com/bigdata-young/ai_26th/main/data/insurance.csv')
 st.write(df)
 
-from joblib import Parallel, delayed
 import joblib
 import os
 
@@ -26,7 +25,7 @@ st.number_input(
 # sex : 성별
 st.radio(
     label='성별',
-    option=["남성", "여성"],
+    options=["남성", "여성"],
     index=0, # 기본선택
     key='sex'
 )
