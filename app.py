@@ -19,8 +19,8 @@ st.number_input(
     value=30,
     key='age'
 )
-# st.session_state['age]
-# st.write(st.session_state['age])
+# st.session_state['age']
+# st.write(st.session_state['age'])
 
 # sex : 성별
 st.radio(
