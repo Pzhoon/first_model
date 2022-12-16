@@ -6,7 +6,6 @@ st.write(df)
 
 import joblib # 사이킷런 import 안해도 model 객체 자체를 pkl로 불러옴
 import os
-
 model_path = f"{os.path.dirname(os.path.abspath(__file__))}/model.pkl"
 model = joblib.load(model_path)
 st.write("## 선형 회귀 모델")
